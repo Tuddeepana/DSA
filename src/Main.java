@@ -5,6 +5,10 @@ public class Main {
         //Variables
         new SampleVar();
 
+        System.out.println();
+        //Array
+        new ArrayVar();
+
 
 
 
