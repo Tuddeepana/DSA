@@ -1,5 +1,5 @@
 public class RefrVar {
-    int value=1000;
+    int value=50;
 
     RefrVar(){
 
@@ -10,6 +10,9 @@ public class RefrVar {
         int x = i;
         System.out.println("Check: "+ x);
 
+        value = x;
+        System.out.println("Add value Reference :"+ i);
+
 
 
     }
@@ -18,6 +21,8 @@ public class RefrVar {
     public static void Check(){
         RefrVar refrVar = new RefrVar();
         System.out.println("Reference value "+refrVar.value);
+
+
 
     }
 
