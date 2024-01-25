@@ -9,6 +9,12 @@ public class Main {
         //Array
         new ArrayVar();
 
+        System.out.println();
+
+        //pass by References and pass by Values
+
+
+         RefrVar.Check();
 
 
 
