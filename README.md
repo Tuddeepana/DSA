@@ -11,7 +11,7 @@ This repository serves as a personal study space for learning and implementing d
 - [Content](#content)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 
