@@ -6,40 +6,31 @@ public class QueueArray {
 
     public static void main(String[] args) {
 
+        System.out.println("Array length: " + queue.length);
 
-
-        for (int i=0; i<queue.length; i++){
-            queue(i+1);
-
+        // Add data to the queue
+        for (int i = 0; i < queue.length; i++) {
+            enqueue(i + 1);
         }
-        System.out.println(queue[0]);
-        System.out.println(queue[1]);
 
-
-        System.out.println("queue deque");
-        deque();
-        System.out.println(queue[0]);
-
-
+        System.out.println("Queue elements:");
         printQueue();
 
-    }
+        // Remove an element from the front of the queue and print the removed element
+        System.out.println("Removed element: " + dequeue());
 
-    private static void queue(int i) {
-        if(rear<queue.length){
-            queue[rear++]=i;
-        }else {
-            System.out.println("Queue Full");
+        System.out.println("Queue elements after removal:");
+        printQueue();
+    }
+    private static void enqueue(int data) {
+        if (rear < queue.length) {
+            queue[rear++] = data;
+        } else {
+            System.out.println("Queue is full. Cannot enqueue " + data);
         }
     }
 
-    private static void deque(){
-        if(start<rear){
-            start++;
-        }else {
-            System.out.println("Queue Empty");
-        }
-    }
+    // Method to print the elements of the queue
     private static void printQueue() {
         for (int i = start; i < rear; i++) {
             System.out.println(queue[i]);
@@ -48,13 +39,23 @@ public class QueueArray {
     }
 
 
-
-
-
-
-
-
+    // Method to remove an element from the front of the queue and return the removed element
+    private static int dequeue() {
+        int removedElement = -1; // Default value if the queue is empty
+        if (start < rear) {
+            removedElement = queue[start++];
+        } else {
+            System.out.println("Queue is empty. Cannot dequeue.");
+        }
+        return removedElement;
     }
+
+
+
+
+
+
+}
 
 
 
