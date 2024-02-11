@@ -1,11 +1,14 @@
 public class Recursion {
 
     public static void main(String[] args) {
-        System.out.println(req(5));
+        System.out.println("Normal "+req(5));
+
+        System.out.println("Recursive " + recursiveFunction(5));
 
 
     }
 
+    //Normal Function
     static int req(int x) {
         int answer = 1;
 
@@ -15,6 +18,19 @@ public class Recursion {
 
         }
         return answer;
+    }
+
+    //Recursive Function
+
+    static  int recursiveFunction(int r){
+
+        if(r<=1){
+            return 1;
+        }
+        return  r* recursiveFunction(r-1);
+
+
+
     }
 
 }
